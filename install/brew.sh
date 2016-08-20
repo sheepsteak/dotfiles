@@ -44,34 +44,17 @@ brew upgrade --all
 # which version I'm using.
 
 apps=(
-    rvm
-    nvm
-    mongodb
-    bash-completion2
-    coreutils
-    moreutils
-    findutils
-    ffmpeg
-    fortune
-    ponysay
-    git
-    git-extras
-    hub
-    gnu-sed --with-default-names
-    grep --with-default-names
-    homebrew/completions/brew-cask-completion
-    homebrew/dupes/grep
-    homebrew/dupes/openssh
-    mtr
-    autojump
-    imagemagick --with-webp
-    python
-    source-highlight
-    the_silver_searcher
-    tree
-    ffmpeg --with-libvpx
-    wget
-    wifi-password
+  diff-so-fancy
+  flow
+  git
+  heroku
+  rename
+  rust
+  trash
+  tree
+  watchman
+  wifi-password
+  zsh
 )
 
 brew install "${apps[@]}"

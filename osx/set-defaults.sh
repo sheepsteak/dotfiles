@@ -8,9 +8,9 @@
 #
 
 # Set computer name
-COMPUTERNAME="Nick Plekhanov's MBP"
-HOSTNAME='mbp'
-LOCALHOSTNAME='mbp'
+COMPUTERNAME="Chris's MacBook Pro"
+HOSTNAME='Chris-MBP.home'
+LOCALHOSTNAME='Chris-MBP.home'
 
 # Ask for the administrator password upfront
 sudo -v
@@ -61,21 +61,11 @@ defaults write com.assple.SoftwareUpdate ScheduleFrequency -int 1
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable Swipe controls for Google Chrome
-defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
-
 # Disable inline attachments in Mail.app (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
-
-# Disable some menu bar icons: Time Machine, Volume and User
-for domain in ~/Library/Preferences/ByHost/com.apple.stytemuiserver.*; do
-  "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-  "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-  "/System/Library/CoreServices/Menu Extras/User.menu"
-done
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -99,10 +89,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 ###############################################################################
 
 # Map bottom right corner of Apple trackpad to right-click.
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write com.apple.trackpad.enableSecondaryClick -bool true
 
 # Set a really fast keyboard repeat rate.
 defaults write -g KeyRepeat -int 0
@@ -111,10 +99,10 @@ defaults write -g KeyRepeat -int 0
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Set language and text formats. (USD and Imperial Units)
-defaults write -g AppleLanguages -array "en" "nl"
-defaults write -g AppleLocale -string "en_US@currency=USD"
+defaults write -g AppleLanguages -array "en-GB"
+defaults write -g AppleLocale -string "en_GB"
 defaults write -g AppleMeasurementUnits -string "Inches"
-defaults write -g AppleMetricUnits -bool false
+defaults write -g AppleMetricUnits -bool true
 
 ###############################################################################
 # Screen
@@ -146,16 +134,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable sub-pixel rendering on non-Apple LCDs.
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
-# Disable and kill Dashboard
-# Can be reverted with:
-# defaults write com.apple.dashboard mcx-disabled -boolean NO; killall Doc
-defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock
-
-# Disable icons on the Desktop
-# This will "hide" all the files on the Desktop, but one can still access
-# the files through Finder. Makes things look pretty.
-defaults write com.apple.finder CreateDesktop -bool false && killall Finder
 
 ###############################################################################
 # Finder

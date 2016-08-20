@@ -154,27 +154,15 @@ echo "done"
 
 declare -a FILES_TO_SYMLINK=(
 
-  'shell/shell_aliases'
-  'shell/shell_config'
-  'shell/shell_exports'
-  'shell/shell_functions'
   'shell/bash_profile'
-  'shell/bash_prompt'
   'shell/bashrc'
   'shell/zshrc'
-  'shell/ackrc'
-  'shell/curlrc'
-  'shell/gemrc'
-  'shell/inputrc'
   'shell/screenrc'
 
   'git/gitattributes'
   'git/gitconfig'
-  'git/gitignore'
 
 )
-
-# FILES_TO_SYMLINK="$FILES_TO_SYMLINK .vim bin" # add in vim and the binaries
 
 # Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 
@@ -266,44 +254,44 @@ install_zsh () {
 
 # Package managers & packages
 
-# . "$DOTFILES_DIR/install/brew.sh"
-# . "$DOTFILES_DIR/install/npm.sh"
+. "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/brew-cask.sh"
+. "$DOTFILES_DIR/install/npm.sh"
 
-# if [ "$(uname)" == "Darwin" ]; then
-    # . "$DOTFILES_DIR/install/brew-cask.sh"
-# fi
+
+###############################################################################
+# OSX defaults                                                                #
+# https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
+###############################################################################
+
+sh osx/set-defaults.sh
 
 main
-# install_zsh
+install_zsh
 
 ###############################################################################
 # Atom                                                                        #
 ###############################################################################
+#ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 
 # Copy over Atom configs
-#cp -r atom/packages.list $HOME/.atom
+cp -r atom/packages.list $HOME/.atom
 
 # Install community packages
-#apm list --installed --bare - get a list of installed packages
-#apm install --packages-file $HOME/.atom/packages.list
-
-###############################################################################
-# Zsh                                                                         #
-###############################################################################
-
-# Install Zsh settings
-ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
-
+apm list --installed --bare - get a list of installed packages
+apm install --packages-file $HOME/.atom/packages.list
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
 ###############################################################################
 
+defaults import com.googlecode.iterm2 "${HOME}/dotfiles/iterm/com.googlecode.iterm2.plist"
+
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Install the Solarized Dark theme for iTerm
-open "${HOME}/dotfiles/iterm/themes/Solarized Dark.itermcolors"
+open "${HOME}/dotfiles/iterm/themes/Seti.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false

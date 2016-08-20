@@ -1,18 +1,11 @@
-# Path to your oh-my-zsh configuration.
+# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
-# Explicitly configured $PATH variable
-export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin/"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="nick"
-
-# Z beats cd most of the time
-. ~/z/z.sh
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -41,35 +34,55 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(fabric brew node npm history git-flow vagrant zsh-syntax-highlighting)
+plugins=(git node npm web-search wd)
 
 # User configuration
 
-# Load the shell dotfiles
-for file in $HOME/.{shell_exports,shell_aliases,shell_functions,shell_config}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
+setopt inc_append_history # Append history as commands are executed
+setopt hist_ignore_all_dups # Don't save duplicates
+unsetopt share_history # Disable sharing history between terminals (sessions)
 
-# Automatically list directory contents on `cd`.
-# auto-ls () {
-#   emulate -L zsh;
-#   # explicit sexy ls'ing as aliases arent honored in here.
-#   hash gls >/dev/null 2>&1 && CLICOLOR_FORCE=1 gls -aFh --color --group-directories-first || ls
-# }
-# chpwd_functions=( auto-ls $chpwd_functions )
+# Expansion and Globbing
+setopt extended_glob # treat #, ~, and ^ as part of patterns for filename generation
 
 source $ZSH/oh-my-zsh.sh
-
-# Source local extra (private) settings specific to machine if it exists
-[ -f ~/.zsh.local ] && source ~/.zsh.local
 
 # npm tab completion
 . <(npm completion)
 
-# fortune: brew install fortune ponysay
-fortune | ponysay
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
+
+# Git alias for printing release logs
+alias glor="git log --oneline --decorate --no-merges --pretty=\"%h %s (%an)\""
+alias ggpush='git push -u origin $(current_branch)'
+
+lazynvm() {
+  unset -f nvm node npm
+  export NVM_DIR=~/.nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+}
+
+nvm() {
+  lazynvm
+  nvm $@
+}
+
+node() {
+  lazynvm
+  node $@
+}
+
+npm() {
+  lazynvm
+  npm $@
+}
+
+# Stop Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1

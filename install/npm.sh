@@ -18,13 +18,13 @@ then
   echo "Installing a stable version of Node..."
 
   # Install the stable version of node.
-  nvm install 5
+  nvm install 6
 
   # Switch to the installed version
-  nvm use 5
+  nvm use 6
 
   # Use the stable version of node by default.
-  nvm alias default 5
+  nvm alias default 6
 fi
 
 # All `npm install <pkg>`` commands will pin to the version that was available at the time you run the command
@@ -32,15 +32,17 @@ npm config set save-exact = true
 
 # Globally install with npm
 packages=(
-    diff-so-fancy
-    gulp
-    grunt-cli
-    bower
-    http-server
-    servedir
-    nodemon
-    svgo
-    yo
+  babel-node-debug
+  create-react-app
+  diff-so-fancy
+  http-server
+  local-web-server
+  node-inspector
+  nodemon
+  react-native-cli
+  servedir
+  svgo
+  yo
 )
 
 npm install -g "${packages[@]}"

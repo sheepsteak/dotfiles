@@ -201,22 +201,6 @@ main() {
     fi
 
   done
-
-  # Copy batcharge
-  ln -fs $HOME/dotfiles/bin $HOME
-  chmod +rwx $HOME/bin/batcharge.py
-
-  # Symlink online-check.sh
-  ln -fs $HOME/dotfiles/lib/online-check.sh $HOME/online-check.sh
-
-  # Write out current crontab
-  crontab -l > mycron
-  # Echo new cron into cron file
-  echo "* * * * * ~/online-check.sh" >> mycron
-  # Install new cron file
-  crontab mycron
-  rm mycron
-
 }
 
 install_zsh () {
@@ -278,8 +262,8 @@ install_zsh
 cp -r atom/packages.list $HOME/.atom
 
 # Install community packages
-apm list --installed --bare - get a list of installed packages
-apm install --packages-file $HOME/.atom/packages.list
+apm-beta list --installed --bare - get a list of installed packages
+apm-beta install --packages-file $HOME/.atom/packages.list
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #

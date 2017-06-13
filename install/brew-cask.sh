@@ -14,6 +14,7 @@ apps=(
   firefox
   gas-mask
   iterm2
+  kdiff3
   openemu
   spotify
   sublime-text

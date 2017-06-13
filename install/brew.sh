@@ -45,7 +45,6 @@ brew upgrade --all
 
 apps=(
   diff-so-fancy
-  flow
   git
   heroku
   rename

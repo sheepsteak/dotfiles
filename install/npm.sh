@@ -14,7 +14,7 @@
 #
 
 # All `npm install <pkg>`` commands will pin to the version that was available at the time you run the command
-npm config set save-exact = true
+npm config set save-exact true
 
 # Globally install with npm
 packages=(

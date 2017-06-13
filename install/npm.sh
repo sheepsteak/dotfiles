@@ -32,17 +32,7 @@ npm config set save-exact = true
 
 # Globally install with npm
 packages=(
-  babel-node-debug
-  create-react-app
-  diff-so-fancy
-  http-server
   local-web-server
-  node-inspector
-  nodemon
-  react-native-cli
-  servedir
-  svgo
-  yo
 )
 
 npm install -g "${packages[@]}"

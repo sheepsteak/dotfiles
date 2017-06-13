@@ -14,14 +14,11 @@ apps=(
   chromium
   dolphin
   firefox
-  flux
   gas-mask
-  github-desktop
-  handbrake
   iterm2
-  macdown
   openemu
   spotify
+  sublime-text
   utorrent
   vlc
 )

@@ -47,12 +47,14 @@ apps=(
   diff-so-fancy
   git
   heroku
+  node
   rename
   rust
   trash
   tree
   watchman
   wifi-password
+  yarn
   zsh
 )
 

@@ -203,6 +203,9 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 # Automatically hide and show the Dock
 # defaults write com.apple.dock autohide -bool true
 
+# Set the Dock position
+defaults write com.apple.Dock orientation -string left
+
 ###############################################################################
 # Do some clean up work.
 ###############################################################################

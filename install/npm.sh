@@ -13,20 +13,6 @@
 #     ./node_modules/.bin/webpack --config webpack.local.config.js
 #
 
-if test ! $(which nvm)
-then
-  echo "Installing a stable version of Node..."
-
-  # Install the stable version of node.
-  nvm install 6
-
-  # Switch to the installed version
-  nvm use 6
-
-  # Use the stable version of node by default.
-  nvm alias default 6
-fi
-
 # All `npm install <pkg>`` commands will pin to the version that was available at the time you run the command
 npm config set save-exact = true
 

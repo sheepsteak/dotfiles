@@ -7,6 +7,7 @@ brew tap caskroom/cask
 apps=(
   1password
   appcleaner
+  atom-beta
   backblaze
   firefox-developer-edition
   caskroom/versions/google-chrome-dev

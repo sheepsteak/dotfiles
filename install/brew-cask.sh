@@ -7,19 +7,16 @@ brew tap caskroom/cask
 apps=(
   1password
   appcleaner
-  atom-beta
   backblaze
-  chromium
-  dolphin
-  firefox
+  firefox-developer-edition
+  caskroom/versions/google-chrome-dev
   gas-mask
   iterm2
   kdiff3
   openemu
   spotify
-  sublime-text
-  utorrent
   vlc
+  visual-studio-code
 )
 
 brew cask install "${apps[@]}"

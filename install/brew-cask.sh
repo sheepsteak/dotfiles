@@ -8,7 +8,7 @@ apps=(
   1password
   appcleaner
   backblaze
-  firefox-developer-edition
+  caskroom/versions/firefox-developer-edition
   caskroom/versions/google-chrome-dev
   gas-mask
   iterm2

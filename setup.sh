@@ -145,13 +145,6 @@ echo "done"
 #
 
 
-# Atom editor settings
-echo -n "Copying Atom settings.."
-mv -f ~/.atom ~/dotfiles_old/
-ln -s $HOME/dotfiles/atom ~/.atom
-echo "done"
-
-
 declare -a FILES_TO_SYMLINK=(
 
   'shell/bash_profile'
@@ -229,9 +222,8 @@ install_zsh () {
       fi
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
-      echo "We'll install zsh, then re-run this script!"
       brew install zsh
-      exit
+      install_zsh
     fi
   fi
 }
@@ -242,7 +234,6 @@ install_zsh () {
 . "$DOTFILES_DIR/install/brew-cask.sh"
 . "$DOTFILES_DIR/install/yarn.sh"
 
-
 ###############################################################################
 # OSX defaults                                                                #
 # https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
@@ -252,18 +243,6 @@ sh osx/set-defaults.sh
 
 main
 install_zsh
-
-###############################################################################
-# Atom                                                                        #
-###############################################################################
-#ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
-
-# Copy over Atom configs
-cp -r atom/packages.list $HOME/.atom
-
-# Install community packages
-apm-beta list --installed --bare - get a list of installed packages
-apm-beta install --packages-file $HOME/.atom/packages.list
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #

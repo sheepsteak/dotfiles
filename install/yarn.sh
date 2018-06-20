@@ -13,9 +13,6 @@
 #     ./node_modules/.bin/webpack --config webpack.local.config.js
 #
 
-# All `npm install <pkg>`` commands will pin to the version that was available at the time you run the command
-yarn config set save-exact true
-
 # Globally install with npm
 packages=(
   local-web-server

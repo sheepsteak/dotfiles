@@ -44,8 +44,8 @@ apps=(
   git
   heroku
   node
+  nvm
   rename
-  rust
   trash
   tree
   watchman

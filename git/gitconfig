@@ -46,8 +46,7 @@
         show = diff-so-fancy | less --tabs=4 -RFX
 
 [diff]
-  tool = kdiff3
-[difftool "kdiff3"]
+  tool = kdiff3[difftool "kdiff3"]
   path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 
 [pretty]
@@ -104,9 +103,13 @@
         required = true
 
 [filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
+        required = true
+        clean = git media clean %f
+        smudge = git media smudge %f
 
 [gui]
-  fontdiff = -family \"Source Code Pro\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+        fontdiff = -family \"Source Code Pro\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+
+[user]
+        name = "Chris Shepherd"
+        useConfigOnly = true

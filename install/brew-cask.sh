@@ -5,7 +5,6 @@ brew tap caskroom/cask
 
 # Install packages
 apps=(
-  1password
   appcleaner
   backblaze
   caskroom/versions/firefox-developer-edition

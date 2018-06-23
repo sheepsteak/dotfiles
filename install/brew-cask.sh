@@ -7,6 +7,7 @@ brew tap caskroom/cask
 apps=(
   appcleaner
   backblaze
+  caskroom/fonts/font-hack
   caskroom/versions/firefox-developer-edition
   caskroom/versions/google-chrome-dev
   gas-mask

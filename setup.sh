@@ -203,10 +203,6 @@ install_zsh () {
     if [[ ! -d $dir/oh-my-zsh/ ]]; then
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     fi
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-      chsh -s $(which zsh)
-    fi
   else
     # If zsh isn't installed, get the platform of the current machine
     platform=$(uname);

@@ -25,7 +25,6 @@ apps=(
   git
   go
   gomplate
-  heroku
   kustomize
   nvm
   python@2

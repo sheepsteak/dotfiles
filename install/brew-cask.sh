@@ -7,6 +7,7 @@ brew tap caskroom/cask
 apps=(
   appcleaner
   backblaze
+  discord
   docker-edge
   dotnet-sdk
   figma
@@ -21,6 +22,7 @@ apps=(
   openemu
   postico
   postman
+  slack
   spotify
   vscodium
 )

@@ -7,16 +7,22 @@ brew tap caskroom/cask
 apps=(
   appcleaner
   backblaze
-  caskroom/fonts/font-hack
-  caskroom/versions/firefox-developer-edition
-  caskroom/versions/google-chrome-dev
+  docker-edge
+  dotnet-sdk
+  figma
+  firefox-developer-edition
+  flux
   gas-mask
+  google-chrome-dev
+  google-cloud-sdk
   iterm2
   kdiff3
+  kitematic
   openemu
+  postico
+  postman
   spotify
-  vlc
-  visual-studio-code
+  vscodium
 )
 
 brew cask install "${apps[@]}"

@@ -21,4 +21,7 @@ extensions=(
 
 ln -s /Applications/VSCodium.app/Contents/Resources/app/bin/code /usr/local/bin/vscodium
 
-vscodium --install-extension "${extensions[@]}"
+for extension in "${extensions[@]}"
+do
+  vscodium --install-extension "$extension"
+done

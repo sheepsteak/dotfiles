@@ -233,6 +233,7 @@ install_zsh () {
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
 . "$DOTFILES_DIR/install/yarn.sh"
+. "$DOTFILES_DIR/install/vscodium.sh"
 
 ###############################################################################
 # OSX defaults                                                                #
@@ -243,6 +244,12 @@ sh osx/set-defaults.sh
 
 main
 install_zsh
+
+###############################################################################
+# VSCodium                                                                    #
+###############################################################################
+
+cp "$DOTFILES_DIR/vscodium" "~/Library/Application Support/VSCodium"
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #

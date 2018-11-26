@@ -1,0 +1,31 @@
+{
+    "breadcrumbs.enabled": true,
+    "eslint.autoFixOnSave": true,
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "SFMono-Regular",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.suggest.localityBonus": true,
+    "eslint.packageManager": "yarn",
+    "files.associations": {
+      ".babelrc": "json"
+    },
+    "files.autoSave": "onFocusChange",
+    "flow.useNPMPackagedFlow": true,
+    "go.useLanguageServer": true,
+    "go.languageServerExperimentalFeatures": {
+      "format": true,
+      "autoComplete": true
+    },
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "javascript.validate.enable": false,
+    "prettier.requireConfig": true,
+    "search.showLineNumbers": true,
+    "telemetry.enableTelemetry": false,
+    "terraform.telemetry.enabled": false,
+    "workbench.colorTheme": "fairyfloss",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.fontAliasing": "auto",
+  }
+  

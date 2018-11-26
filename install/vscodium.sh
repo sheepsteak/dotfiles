@@ -19,4 +19,6 @@ extensions=(
   ziyasal.vscode-open-in-github
 )
 
+ln -s /Applications/VSCodium.app/Contents/Resources/app/bin/code /usr/local/bin/vscodium
+
 vscodium --install-extension "${extensions[@]}"

@@ -36,8 +36,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 defaults write com.apple.Safari ShowFavoritesBar -bool false
 
 # Set up Safari for development.
+defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
+defaults write com.apple.Safari AutoFillPasswords -bool false
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+defaults write com.apple.Safari ShowIconsInTabs -bool true
+defaults write com.apple.Safari ShowOverlayStatusBar -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write -g WebKitDeveloperExtras -bool true

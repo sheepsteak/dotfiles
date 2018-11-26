@@ -8,7 +8,7 @@ apps=(
   appcleaner
   backblaze
   discord
-  docker-edge
+  homebrew/cask-versions/docker-edge
   dotnet-sdk
   figma
   firefox-developer-edition

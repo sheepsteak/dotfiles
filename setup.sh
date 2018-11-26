@@ -231,13 +231,6 @@ install_zsh () {
 . "$DOTFILES_DIR/install/yarn.sh"
 . "$DOTFILES_DIR/install/vscodium.sh"
 
-###############################################################################
-# OSX defaults                                                                #
-# https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
-###############################################################################
-
-sh osx/set-defaults.sh
-
 main
 install_zsh
 
@@ -262,5 +255,9 @@ open "${HOME}/dotfiles/iterm/themes/Seti.itermcolors"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-# Reload zsh settings
-source ~/.zshrc
+###############################################################################
+# OSX defaults                                                                #
+# https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
+###############################################################################
+
+sh osx/set-defaults.sh

@@ -249,7 +249,7 @@ install_zsh
 # VSCodium                                                                    #
 ###############################################################################
 
-cp "$DOTFILES_DIR/vscodium" "~/Library/Application Support/VSCodium"
+cp -R "$DOTFILES_DIR/vscodium" "~/Library/Application Support/VSCodium"
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #

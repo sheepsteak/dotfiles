@@ -7,24 +7,29 @@ brew tap caskroom/cask
 apps=(
   appcleaner
   backblaze
+  bitwarden
   discord
-  homebrew/cask-versions/docker-edge
+  docker
   dotnet-sdk
-  figma
   firefox-developer-edition
-  flux
   gas-mask
   google-chrome-dev
-  google-cloud-sdk
+  gpg-suite
+  graphiql
   iterm2
+  kap
   kdiff3
-  kitematic
-  openemu
-  postico
+  microsoft-teams
+  netnewswire
+  nvidia-geforce-now
   postman
+  react-native-debugger
   slack
   spotify
-  vscodium
+  tableplus
+  visual-studio-code
+  vlc
+  whatsapp
 )
 
 brew cask install "${apps[@]}"

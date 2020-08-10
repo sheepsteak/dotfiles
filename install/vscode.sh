@@ -11,7 +11,6 @@ extensions=(
   jtladeiras.vscode-inline-sql
   karigari.chat
   kumar-harsh.graphql-for-vscode
-  mauve.terraform
   mikestead.dotenv
   ms-azuretools.vscode-docker
   MS-CEINTL.vscode-language-pack-en-GB

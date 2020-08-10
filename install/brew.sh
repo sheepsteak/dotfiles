@@ -24,7 +24,6 @@ apps=(
   git
   gnupg
   nvm
-  python@2
   rename
   trash
   tree

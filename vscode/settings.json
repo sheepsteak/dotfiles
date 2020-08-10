@@ -1,0 +1,71 @@
+{
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "breadcrumbs.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeActionsOnSave": {
+      // "source.organizeImports": true,
+      "source.fixAll": true,
+    },
+    "editor.fontFamily": "Hack",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "all",
+    "editor.suggest.localityBonus": true,
+    "editor.suggestSelection": "first",
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn",
+    "extensions.autoUpdate": false,
+    "files.associations": {
+        "*.css": "css",
+        "*.module.css": "css",
+        ".babelrc": "json"
+    },
+    "diffEditor.renderSideBySide": true,
+    "editor.columnSelection": false,
+    "editor.smoothScrolling": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "files.autoSave": "onWindowChange",
+    "javascript.format.enable": false,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "javascript.validate.enable": false,
+    "omnisharp.enableEditorConfigSupport": true,
+    "prettier.requireConfig": true,
+    "search.showLineNumbers": true,
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.forceUpload": true,
+    "sync.gist": "712af3ee86e78b60936da4e832e29229",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terraform.telemetry.enabled": false,
+    "typescript.format.enable": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.nativeTabs": true,
+    "window.titleBarStyle": "native",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Night Owl Light",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.iconTheme": "ayu",
+    "workbench.list.smoothScrolling": true,
+    "workbench.preferredDarkColorTheme": "Night Owl",
+    "workbench.preferredLightColorTheme": "Night Owl Light",
+    "window.autoDetectColorScheme": true,
+  }

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+brew tap homebrew/cask-versions
+
 # Install packages
 apps=(
   appcleaner

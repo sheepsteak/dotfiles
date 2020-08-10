@@ -229,16 +229,16 @@ install_zsh () {
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
 . "$DOTFILES_DIR/install/yarn.sh"
-. "$DOTFILES_DIR/install/vscodium.sh"
+. "$DOTFILES_DIR/install/vscode.sh"
 
 main
 install_zsh
 
 ###############################################################################
-# VSCodium                                                                    #
+# VSCode                                                                    #
 ###############################################################################
 
-cp -R "$DOTFILES_DIR/vscodium" "~/Library/Application Support/VSCodium"
+cp -R "$DOTFILES_DIR/vscode" "~/Library/Application Support/VSCode"
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #

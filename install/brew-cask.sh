@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Install Caskroom
-brew tap caskroom/cask
-
 # Install packages
 apps=(
   appcleaner

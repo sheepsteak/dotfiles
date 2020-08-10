@@ -57,13 +57,6 @@ setopt extended_glob # treat #, ~, and ^ as part of patterns for filename genera
 
 source $ZSH/oh-my-zsh.sh
 
-# npm tab completion
-. <(npm completion)
-
-# bindkey -e
-# bindkey '^[[1;9C' forward-word
-# bindkey '^[[1;9D' backward-word
-
 # Git alias for printing release logs
 alias glor="git log --oneline --decorate --no-merges --pretty=\"%h %s (%an)\""
 alias ggpush='git push -u origin $(current_branch)'

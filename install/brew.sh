@@ -19,24 +19,19 @@ brew update
 brew upgrade
 
 apps=(
-  dep
   diff-so-fancy
-  ffmpeg
+  github/gh/gh
   git
-  go
-  gomplate
-  kustomize
+  gnupg
   nvm
   python@2
   rename
-  terraform
   trash
   tree
   watchman
   wget
   wifi-password
   yarn
-  youtube-dl
   zsh
   zsh-completions
   zsh-syntax-highlighting

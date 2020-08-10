@@ -238,7 +238,7 @@ install_zsh
 # VSCode                                                                    #
 ###############################################################################
 
-cp -R "$DOTFILES_DIR/vscode" "~/Library/Application Support/VSCode"
+cp -R $DOTFILES_DIR/VSCode/* ~/Library/Application\ Support/Code/User
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #

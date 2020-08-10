@@ -34,5 +34,5 @@ extensions=(
 
 for extension in "${extensions[@]}"
 do
-  vscode --install-extension "$extension"
+  code --install-extension "$extension"
 done
